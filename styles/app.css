@@ -1,0 +1,57 @@
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.html,
+body,
+#root {
+  height: 100vh;
+  width: 100vw;
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+@layer components {
+  @variants responsive {
+    /* Base Surface */
+    .surface {
+      @apply rounded-xl shadow-md hover:shadow-xl;
+    }
+    .popup {
+      @apply rounded-xl shadow-xl;
+    }
+
+    .square {
+      width: 30%;
+      height: 0;
+      padding-top: 30%;
+    }
+
+    /* Buttons */
+    .btn {
+      @apply rounded-lg font-semibold shadow transition duration-300 ease-in-out hover:shadow-lg;
+    }
+    .btn-s {
+      @apply btn px-3.5 py-2.5 text-xs;
+    }
+    .btn-m {
+      @apply btn px-3.5 py-2.5 text-sm;
+    }
+    .btn-l {
+      @apply btn px-4 py-3 text-sm;
+    }
+    .btn-xl {
+      @apply btn px-6 py-3.5 text-sm;
+    }
+    .btn-cta {
+      @apply bg-indigo-600 text-white hover:bg-indigo-500;
+    }
+    .btn-primary {
+      @apply bg-black text-white hover:bg-gray-900;
+    }
+    .btn-ghost {
+      @apply bg-gray-100 text-black hover:bg-gray-50;
+    }
+  }
+}
